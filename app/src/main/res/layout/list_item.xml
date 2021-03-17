@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_margin="30dp">
+
+
+    <LinearLayout
+        android:id="@+id/partie1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:weightSum="100">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="20"
+            app:srcCompat="@drawable/image" />
+            <TextView
+                android:id="@+id/titre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:fontFamily="@font/poppins_light"
+                android:textColor="@color/black"
+                android:text="Maracana" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titre"
+                android:numStars="5"
+                android:rating="4.5"
+                android:stepSize="0.25" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rb"
+                android:layout_marginTop="0dp"
+                android:text="TextView"
+                android:fontFamily="@font/poppins_light"
+                android:textColor="@color/black"/>
+
+             </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_reserver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/bt_voirplus"
+                android:text="reserver" />
+
+            <Button
+                android:id="@+id/bt_voirplus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="voir plus"
+                android:layout_gravity="right|bottom"
+               />
+
+
+
+
+    <LinearLayout
+        android:layout_below="@+id/partie1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="3"
+        android:background="@drawable/rounded_edittext">
+
+        <TextView
+            android:id="@+id/localisation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:textSize="10dp"
+            android:text="Ezzahra,Ben Arous"
+            />
+
+        <TextView
+            android:id="@+id/nbjoueurs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/ic_action_name"
+            android:text="12 joueures"
+            />
+
+        <TextView
+            android:id="@+id/heures"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:textSize="10dp"
+            android:text="heures et 30 minutes "
+           />
+
+    </LinearLayout>
+
+</LinearLayout>

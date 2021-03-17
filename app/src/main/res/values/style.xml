@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="FacebookLoginButton">
+        <item name="android:text">aaaa</item>
+        <item name="android:background">@drawable/rounded_buttonlight</item>
+        <item name="android:height">271dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+</resources>

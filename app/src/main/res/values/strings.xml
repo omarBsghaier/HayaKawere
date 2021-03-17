@@ -1,0 +1,22 @@
+<resources>
+    <string name="Mot_de_passe">Mot de passe</string>
+    <string name="email">Email</string>
+    <string name="create">Créer votre compte </string>
+    <string name="inscription"> S\'inscrire </string>
+    <string name="connexion">Se connecter </string>
+    <string name="Hintemail">    loremSam@mail.com </string>
+    <string name="title_activity">Map</string>
+    <string name="app_name" translatable="false">HayaKawere</string>
+    <string name="facebook_app_id">708811886457431</string>
+    <string name="fb_login_protocol_scheme">fb708811886457431</string>
+    <string name="fullnamehint"><font size="15">Nom et prénom</font></string>
+    <string name="emailhint"><font size="15">Email</font></string>
+    <string name="mdphint"><font size="15">Mot de passe </font></string>
+    <string name="remdphint"><font size="15">Répeter mot de passe</font> </string>
+    <string name="tab_text_1">Terrain</string>
+    <string name="tab_text_2">Evénement</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
