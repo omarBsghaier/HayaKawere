@@ -15,6 +15,12 @@
         android:endColor="#41dc7f"
         android:angle="0"/></color>
 
+    <color name="stars_button">#B1B39F</color>
+
+    <color name="Amber">#FFEB3B</color>
+
+
+    <color name="Amberlight">#FFC107</color>
 
 
 

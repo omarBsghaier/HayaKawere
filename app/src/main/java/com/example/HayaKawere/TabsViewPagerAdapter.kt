@@ -4,7 +4,20 @@ import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-class TabsViewPagerAdapter(context: Context, manager: FragmentManager) : FragmentPagerAdapter( manager, FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
+class
+
+
+
+
+
+
+
+
+
+
+
+
+TabsViewPagerAdapter(context: Context, manager: FragmentManager) : FragmentPagerAdapter( manager, FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
  {
      private var TAB_TITLES = arrayListOf(R.string.tab_text_1, R.string.tab_text_2)
      private lateinit var mContext: Context
