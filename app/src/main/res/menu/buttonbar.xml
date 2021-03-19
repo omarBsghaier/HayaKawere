@@ -3,7 +3,9 @@
     <item
         android:id="@+id/action_one"
         android:icon="@drawable/vue"
-        android:title="One"/>
+        android:title="One"
+        android:enabled="true"
+        />
     <item
         android:id="@+id/action_two"
         android:icon="@drawable/vue"

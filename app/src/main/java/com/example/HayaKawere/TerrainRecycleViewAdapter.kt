@@ -21,7 +21,6 @@ class TerrainRecycleViewAdapter(private val dataSet: ArrayList<TerrainItem>) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val titre: TextView
         val reserver: Button
-        val voir_plus: Button
         val rating: RatingBar
         val description: TextView
         val localisation: TextView
@@ -33,7 +32,6 @@ class TerrainRecycleViewAdapter(private val dataSet: ArrayList<TerrainItem>) :
             // Define click listener for the ViewHolder's View.
             titre = view.findViewById(R.id.titre)
             reserver = view.findViewById(R.id.bt_reserver)
-            voir_plus = view.findViewById(R.id.bt_voirplus)
             rating = view.findViewById(R.id.rb)
             heures = view.findViewById(R.id.heures)
             nbjoueurs = view.findViewById(R.id.nbjoueurs)

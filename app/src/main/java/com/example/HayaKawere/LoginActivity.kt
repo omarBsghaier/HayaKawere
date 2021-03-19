@@ -1,7 +1,6 @@
 package com.example.HayaKawere
 
 
-
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -29,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
 
-              //<!--button facebook-->
+        //<!--button facebook-->
         callbackManager = CallbackManager.Factory.create()
         var loginButton = findViewById<LoginButton>(R.id.login_button)
         loginButton.setReadPermissions("email")
@@ -55,9 +54,10 @@ class LoginActivity : AppCompatActivity() {
         callbackManager!!.onActivityResult(requestCode, resultCode, data)
         super.onActivityResult(requestCode, resultCode, data)
     }
-    fun passer(view: View){
+
+    fun passer(view: View) {
         val intent = Intent(this, AcceuilActivity::class.java)
-                startActivity(intent)
+        startActivity(intent)
 
     }
 

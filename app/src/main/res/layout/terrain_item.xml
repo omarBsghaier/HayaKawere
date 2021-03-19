@@ -48,36 +48,22 @@
 
         <TextView
             android:id="@+id/description"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rb"
             android:layout_toRightOf="@id/im_terrain"
             android:fontFamily="@font/poppins_light"
-            android:text="TextView"
+            android:text="TextView iojjeaziohjeazoijaeziojeazijo  aaaaaaa"
             android:textColor="@color/black" />
+
 
         <Button
             android:id="@+id/bt_reserver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/bt_heart"
-            android:layout_alignRight="@id/bt_heart"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="15dp"
-            android:fontFamily="@font/poppins"
             android:text="Reserver"
-            android:background="@drawable/bt_reserver"
-            android:textColor="@color/white"
-            android:textSize="12dp"
-            style="@style/button_reserver"
-
-            />
-
-
-
-
-
+            android:textColor="@color/white" />
 
         <com.like.LikeButton
             android:id="@+id/bt_heart"
@@ -136,7 +122,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="0.8"
-           >
+            >
 
             <ImageView
                 android:id="@+id/iv_ball_listitm"
