@@ -18,19 +18,15 @@ class AcceuilActivity : AppCompatActivity() {
         object : BottomNavigationView.OnNavigationItemSelectedListener {
             override fun onNavigationItemSelected(@NonNull item: MenuItem): Boolean {
                 when (item.getItemId()) {
-                    R.id.action_one -> {
+                    R.id.bt_home_acceuil_activity -> {
                         openFragment(HomeFragment.newInstance("1"))
                         return true
                     }
-                    R.id.action_two -> {
-                        Toast.makeText(this@AcceuilActivity, " death ", Toast.LENGTH_LONG)
-                            .show()
-                        var t = 0
-                        println("firas" + t)
+                    R.id.bt_favoris_acceuil_activity-> {
                         openFragment(calander.newInstance("2", ""))
                         return true
                     }
-                    R.id.action_three -> {
+                    R.id.bt_calendrier_acceuil_activity -> {
                         openFragment(Favoris.newInstance("3", ""))
                         return true
                     }
@@ -72,7 +68,7 @@ class AcceuilActivity : AppCompatActivity() {
     }
 
     fun openFragment(fragment: Fragment) {
-        val transaction = getSupportFragmentManager().beginTransaction()
+        val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()

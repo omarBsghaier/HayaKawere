@@ -1,6 +1,8 @@
 package com.example.HayaKawere
 
 import android.content.Context
+import android.graphics.Color
+import androidx.core.graphics.toColor
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -40,6 +42,7 @@ TabsViewPagerAdapter(context: Context, manager: FragmentManager) : FragmentPager
          return when(position) {
 
              0->TerrainFragment.newInstance("","")
+
              else->EvenementFragment.newInstance( "","")
             // else ->HomeFragment.newInstance("")
          }

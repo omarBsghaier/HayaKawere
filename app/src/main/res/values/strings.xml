@@ -13,6 +13,10 @@
     <string name="emailhint"><font size="15">Email</font></string>
     <string name="mdphint"><font size="15">Mot de passe </font></string>
     <string name="remdphint"><font size="15">Répeter mot de passe</font> </string>
+    <string name="aime"> ou aimeriez-vous jouer ? </string>
+    <string name="filter">Filtrer</string>
+
+
     <string name="tab_text_1">Terrain</string>
     <string name="tab_text_2">Evénement</string>
     <!-- TODO: Remove or change this placeholder text -->

@@ -4,29 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context="com.example.HayaKawere.LoginActivity"
-    tools:visibility="visible"
-    android:background="@color/white">
+    tools:visibility="visible">
 
 
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        >
-
-<!--        tv_email_activity_login-->
+        <!--        tv_email_activity_login-->
         <TextView
             android:id="@+id/Email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
             android:layout_marginTop="50dp"
-            android:text="@string/email"
             android:fontFamily="@font/poppins_semibold"
+            android:text="@string/email"
             android:textColor="@color/black"
             android:textSize="20dp" />
 
@@ -40,10 +34,10 @@
             android:background="@drawable/rounded_edittext"
             android:drawableRight="@drawable/check"
             android:fontFamily="@font/poppins_extralight"
+            android:hint="@string/Hintemail"
             android:inputType="textEmailAddress"
             android:paddingLeft="15dp"
             android:textColor="@color/black"
-            android:hint="@string/Hintemail"
             android:textColorHint="@color/gris_aghma9" />
 
         <TextView
@@ -61,8 +55,8 @@
             android:textSize="20dp" />
 
         <EditText
-            android:layout_width="270dp"
             android:id="@+id/editTextTextPassword"
+            android:layout_width="270dp"
             android:layout_height="50dp"
             android:layout_below="@id/Mot"
             android:layout_centerHorizontal="true"
@@ -77,52 +71,91 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/editTextTextPassword"
+            android:layout_alignLeft="@id/editTextTextPassword"
+            android:layout_alignRight="@id/editTextTextPassword"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="27dp"
+            android:background="@drawable/rounded_button"
             android:fontFamily="@font/poppins_semibold"
+            android:textAllCaps="false"
+            android:onClick="passer"
             android:text="@string/connexion"
             android:textColor="@color/white"
-            android:background="@drawable/rounded_button"
-            android:onClick="passer"
 
             />
 
-
-        <TextView
-            android:id="@+id/textView"
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_alignLeft="@id/editTextTextPassword"
+            android:layout_alignRight="@id/editTextTextPassword"
+            android:src="@drawable/line_login"
+            android:layout_below="@+id/ConnexionLoginB"
+            android:layout_marginTop="10dp"/>
 
-        <com.google.android.gms.common.SignInButton
-            android:layout_centerHorizontal="true"
-            android:layout_width="271dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/sign_in_button"
-            android:layout_below="@id/login_button"
-            android:textAlignment="center"
-            android:background="@drawable/rounded_buttonlight"
-             />
+
+
+
 
         <com.facebook.login.widget.LoginButton
+
             android:id="@+id/login_button"
             android:layout_width="wrap_content"
-            android:layout_alignLeft="@+id/ConnexionLoginB"
-            android:layout_alignRight="@+id/ConnexionLoginB"
-            android:background="@drawable/rounded_buttonlight"
-            android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:layout_below="@id/ConnexionLoginB"
+            android:paddingVertical="14dp"
+            android:layout_alignLeft="@id/editTextTextPassword"
+            android:layout_alignRight="@id/editTextTextPassword"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginTop="40dp"
+            style="@style/FacebookLoginButton"
 
 
             />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:layout_below="@+id/login_button"
+    android:layout_alignLeft="@id/editTextTextPassword"
+    android:layout_alignRight="@id/editTextTextPassword"
 
+    >
 
-    </RelativeLayout>
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/google_login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            />
+        <Button
+            android:id="@+id/new_googlebtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="Continuer avec google"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/googleg_standard_color_18"
+            android:textAllCaps="false"
+             />
 
 
 </RelativeLayout>
+<!--        <com.google.android.gms.common.SignInButton-->
+<!--            android:id="@+id/sign_in_button"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/login_button"-->
+<!--            android:layout_alignLeft="@id/editTextTextPassword"-->
+<!--            android:layout_alignRight="@id/editTextTextPassword"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:textAlignment="center"-->
+<!--            android:layout_marginTop="20dp"-->
+
+
+
+
+<!--            />-->
+    </RelativeLayout>
+

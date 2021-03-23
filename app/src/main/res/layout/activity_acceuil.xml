@@ -17,11 +17,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
         android:background="@color/white"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/black"
-        app:menu="@menu/buttonbar" />
+        app:itemIconTint="@color/icon_navigation_bar"
+        app:menu="@menu/icon_navigation_bar"
+        app:labelVisibilityMode="unlabeled"
+        android:scrollIndicators="bottom"
+
+
+
+        />
 
 
 </RelativeLayout>

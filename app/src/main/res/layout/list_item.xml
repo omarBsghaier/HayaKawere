@@ -17,6 +17,8 @@
             android:id="@+id/im_terrain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+
             app:srcCompat="@drawable/image" />
 
         <TextView
@@ -24,6 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/im_terrain"
+            android:layout_toEndOf="@id/im_terrain"
             android:fontFamily="@font/poppins_light"
             android:text="Maracana"
             android:textColor="@color/black" />
@@ -34,9 +37,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/titre"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="-5dp"
             android:layout_toRightOf="@id/im_terrain"
+
             android:isIndicator="false"
             android:numStars="5"
             android:progressBackgroundTint="@color/stars_button"
@@ -48,13 +50,25 @@
 
         <TextView
             android:id="@+id/description"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rb"
             android:layout_toRightOf="@id/im_terrain"
-            android:fontFamily="@font/poppins_light"
+            android:fontFamily="@font/poppins_bold"
             android:text="TextView"
-            android:textColor="@color/black" />
+            android:textColor="@color/vert_feteah" />
+        <TextView
+            android:id="@+id/tv_nombrematch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/description"
+            android:layout_below="@id/rb"
+            android:fontFamily="@font/poppins_light"
+            android:paddingTop="4.5dp"
+            android:layout_marginLeft="2dp"
+            android:text="/1 match"
+            android:textSize="10sp"
+            android:textColor="@color/gris_aghma9" />
 
         <Button
             android:id="@+id/bt_reserver"
@@ -63,14 +77,17 @@
             android:layout_below="@id/bt_heart"
             android:layout_alignRight="@id/bt_heart"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="12dp"
             android:layout_marginRight="15dp"
             android:fontFamily="@font/poppins"
             android:text="Reserver"
             android:background="@drawable/bt_reserver"
             android:textColor="@color/white"
-            android:textSize="12dp"
-            style="@style/button_reserver"
+            android:textSize="11dp"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="5dp"
+            android:minHeight="2dp"
+            android:minWidth="2dp"
 
             />
 
@@ -97,7 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/partie1"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/rounded_edittext"
         android:orientation="horizontal"
         android:paddingHorizontal="4dp"

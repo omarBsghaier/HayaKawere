@@ -15,30 +15,145 @@
 
 
        <com.google.android.material.appbar.CollapsingToolbarLayout
-          android:layout_width="match_parent"
-          android:layout_height="300dp"
-          android:background="@drawable/header"
-          app:contentScrim="@color/vert_feteah"
-          app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-          app:titleEnabled="false"
-          app:toolbarId="@+id/toolbar">
+           android:layout_width="match_parent"
+           android:layout_height="300dp"
+           android:background="@drawable/header"
+           app:contentScrim="@color/vert_feteah"
+           app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+           app:titleEnabled="false"
+           app:toolbarId="@+id/toolbar">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <ImageView
+                   android:id="@+id/im_profile"
+                   android:layout_width="35dp"
+                   android:layout_height="35dp"
+                   android:layout_alignBottom="@id/im_notifaction_fragment_home"
+                   android:layout_alignParentLeft="true"
+                   android:layout_marginStart="12dp"
+                   android:layout_marginLeft="12dp"
+                   android:layout_marginTop="12dp"
+                   android:layout_marginEnd="12dp"
+                   android:layout_marginBottom="12dp"
+                   android:src="@drawable/profile_icon"
+                   app:tint="@color/white" />
+
+               <TextView
+                   android:id="@+id/tv_titre"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/im_profile"
+                   android:layout_marginVertical="6dp"
+                   android:layout_marginLeft="12dp"
+                   android:fontFamily="@font/poppins_extrabolditalic"
+                   android:text="Haya kawere "
+                   android:textAllCaps="false"
+                   android:textColor="@color/white"
+                   android:textSize="25dp" />
+
+               <TextView
+                   android:id="@+id/tv_aime_jouer_fragment_home"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tv_titre"
+                   android:layout_marginVertical="8dp"
+                   android:layout_marginLeft="12dp"
+                   android:fontFamily="@font/poppins_light"
+                   android:paddingLeft="4dp"
+                   android:text="@string/aime"
+                   android:textAllCaps="false"
+                   android:textColor="@color/white"
+                   android:textSize="20dp" />
 
 
-         <androidx.appcompat.widget.Toolbar
-             android:id="@+id/toolbar"
-             android:layout_width="match_parent"
-             android:layout_height="?attr/actionBarSize">
-         </androidx.appcompat.widget.Toolbar>
-         <com.google.android.material.tabs.TabLayout
-             android:id="@+id/tab_layout"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:layout_gravity="bottom"
-             app:tabInlineLabel="false"
-             app:tabTextColor="@color/white"
+               <EditText
+                   android:id="@+id/et_rechercehr_fragment_home"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/tv_aime_jouer_fragment_home"
+                   android:layout_alignLeft="@id/tv_aime_jouer_fragment_home"
+                   android:layout_alignRight="@id/tv_aime_jouer_fragment_home"
+                   android:layout_marginVertical="4dp"
+                   android:layout_marginRight="30dp"
+                   android:layout_marginBottom="20dp"
+                   android:background="@drawable/seach"
+                   android:cursorVisible="true"
+                   android:drawableLeft="@drawable/recherche_icon"
+                   android:drawableTint="@color/white"
+                   android:hint="Rechercher"
+                   android:inputType="textShortMessage"
+                   android:paddingHorizontal="4dp"
+                   android:paddingVertical="6dp"
+                   android:textAllCaps="false"
+                   android:textColor="@color/white"
+                   android:textColorHint="@color/gris_feteah" />
 
-             />
-   </com.google.android.material.appbar.CollapsingToolbarLayout>
+               <Button
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/tv_aime_jouer_fragment_home"
+                   android:layout_alignTop="@id/et_rechercehr_fragment_home"
+                   android:layout_alignRight="@id/im_notifaction_fragment_home"
+                   android:layout_alignBottom="@id/et_rechercehr_fragment_home"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginRight="20dp"
+                   android:background="@drawable/seach"
+                   android:drawableRight="@drawable/filtrer_icon"
+                   android:drawableTint="@color/gris_feteah"
+                   android:paddingRight="4dp"
+                   android:text="@string/filter"
+                   android:textAllCaps="false" />
+
+
+               <ru.nikartm.support.ImageBadgeView
+                   android:id="@+id/im_notifaction_fragment_home"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginTop="17dp"
+                   android:layout_marginRight="12dp"
+                   android:paddingTop="5dp"
+
+                   android:paddingRight="6dp"
+                   android:src="@drawable/notification_icon"
+                   app:ibv_badgeBackground="@drawable/drawblebadge"
+                   app:ibv_badgeColor="#C6023A"
+                   app:ibv_badgeLimitValue="false"
+                   app:ibv_badgeOvalAfterFirst="true"
+                   app:ibv_badgePosition="top_right"
+                   app:ibv_badgeTextColor="#ffffff"
+                   app:ibv_badgeTextSize="8sp"
+                   app:ibv_badgeTextStyle="bold"
+                   app:ibv_badgeValue="15"
+                   app:ibv_fixedBadgeRadius="9sp"
+                   app:ibv_fixedRadius="true"
+                   app:ibv_roundBadge="true"
+                   app:ibv_showCounter="true"
+                   app:tint="@color/white" />
+           </RelativeLayout>
+
+           <androidx.appcompat.widget.Toolbar
+               android:id="@+id/toolbar"
+               android:layout_width="match_parent"
+               android:layout_height="?attr/actionBarSize"></androidx.appcompat.widget.Toolbar>
+
+           <com.google.android.material.tabs.TabLayout
+               android:id="@+id/tab_layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="bottom"
+               android:textAllCaps="false"
+               app:tabBackground="@drawable/tab_color"
+               app:tabIndicatorHeight="0dp"
+               app:tabInlineLabel="false"
+               app:tabSelectedTextColor="@color/black"
+               app:tabTextColor="@color/white"
+
+               />
+       </com.google.android.material.appbar.CollapsingToolbarLayout>
 
    </com.google.android.material.appbar.AppBarLayout>
     <androidx.viewpager.widget.ViewPager

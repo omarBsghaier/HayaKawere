@@ -7,8 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="gris_feteah">#FAFAFA</color>
+    <color name="gris_feteah">#F3FAFAFA</color>
+    <color name="pink_swan">#B2B2B2</color>
     <color name="gris_aghma9">#878787</color>
+    <color name="gris_line">#ebebeb</color>
     <color name="vert_feteah">#41DA80</color>
     <color name="headercollap"> <gradient
         android:startColor="#33aa86"
@@ -16,8 +18,11 @@
         android:angle="0"/></color>
 
     <color name="stars_button">#B1B39F</color>
+    <color name="transparence">#78C697</color>
 
-    <color name="Amber">#FFEB3B</color>
+    <color name="Amber" >
+
+        #FFEB3B</color>
 
 
     <color name="Amberlight">#FFC107</color>
