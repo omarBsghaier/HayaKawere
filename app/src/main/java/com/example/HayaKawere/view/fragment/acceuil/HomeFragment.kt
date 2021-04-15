@@ -1,5 +1,5 @@
 
-package com.example.HayaKawere
+package com.example.HayaKawere.view.fragment.acceuil
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
+import com.example.HayaKawere.R
+import com.example.HayaKawere.adapter.TabsViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 
 
@@ -77,6 +79,10 @@ class HomeFragment : Fragment() {
         pager!!.adapter=viewPagerAdapter
         tabLayout!!.setupWithViewPager(pager)
    }
+
+
+
+
 
     companion object {
 

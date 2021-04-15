@@ -1,9 +1,12 @@
-package com.example.HayaKawere
+package com.example.HayaKawere.adapter
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.example.HayaKawere.view.fragment.onBoarding.OnBordingFragment1
+import com.example.HayaKawere.view.fragment.onBoarding.OnBordingFragment2
+import com.example.HayaKawere.view.fragment.onBoarding.OnBordingFragment3
 
 class OnBordingViewAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(
     fragmentManager,
@@ -14,9 +17,6 @@ class OnBordingViewAdapter(fragmentManager: FragmentManager) : FragmentPagerAdap
     }
 
 
-    /**
-     * Return the Fragment associated with a specified position.
-     */
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> OnBordingFragment1.newInstance("", "")

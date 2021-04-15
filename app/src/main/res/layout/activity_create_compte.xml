@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.HayaKawere.CreateCompteActivity"
+    tools:context="com.example.HayaKawere.view.activities.CreateCompteActivity"
     tools:visibility="visible"
     android:background="@color/white">
 
@@ -22,42 +22,67 @@
         android:textColor="@color/black"
         android:textSize="20dp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name"
+   <EditText
+        android:id="@+id/ed_nom_activity_create"
         android:layout_below="@id/create"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="270dp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/height"
         android:layout_centerHorizontal="true"
-        android:hint="@string/fullnamehint"
-        app:boxStrokeColor="@color/vert_feteah"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rounded_edittext"
+        android:fontFamily="@font/poppins_extralight"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
         android:textColorHint="@color/gris_aghma9"
-        android:minHeight="0dp"
-        app:hintTextColor="@color/vert_feteah"
-        app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+        android:hint="@string/fullnamehint"/>
+    <TextView
+        android:id="@+id/tv_msg_nom_create_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ed_nom_activity_create"
+        android:textSize="10dp"
+        android:layout_marginLeft="6dp"
+        android:layout_alignLeft="@id/ed_email_activity_create"
+        android:text="@string/nom_invalide"
+        android:textColor="@color/red"
+        android:visibility="invisible"
+        />
+
+    <EditText
+        android:id="@+id/ed_prenomn_activity_create"
+        android:layout_below="@id/ed_nom_activity_create"
+        android:layout_width="270dp"
+        android:layout_height="@dimen/height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rounded_edittext"
+        android:fontFamily="@font/poppins_extralight"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gris_aghma9"
+        android:hint="@string/fullnamehint"/>
+    <TextView
+        android:id="@+id/tv_msg_prenom_create_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ed_prenomn_activity_create"
+        android:paddingLeft="4dp"
+        android:layout_alignLeft="@id/ed_email_activity_create"
+        android:text="@string/prenom_invalide"
+        android:textColor="@color/red"
+        android:visibility="invisible"
+        android:textSize="10dp"
+        android:layout_marginLeft="6dp"
+        />
 
 
-
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_extralight"
-            android:inputType="text"
-            android:textColor="@color/black"
-            android:textColorHint="@color/gris_aghma9"
-            android:textSize="14sp"
-            style="@style/TextAppearance.AppCompat.Caption"
-
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
 
     <EditText
-        android:id="@+id/email"
-        android:layout_below="@id/name"
+        android:id="@+id/ed_email_activity_create"
+        android:layout_below="@id/ed_prenomn_activity_create"
         android:layout_width="270dp"
         android:layout_height="@dimen/height"
         android:layout_centerHorizontal="true"
@@ -69,9 +94,22 @@
         android:textColor="@color/black"
         android:textColorHint="@color/gris_aghma9"
         android:hint="@string/emailhint"/>
+    <TextView
+        android:id="@+id/tv_msg_email_create_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ed_email_activity_create"
+        android:layout_alignLeft="@id/ed_email_activity_create"
+        android:paddingLeft="4dp"
+        android:text="@string/email_invalide"
+        android:textColor="@color/red"
+        android:visibility="invisible"
+        android:textSize="10dp"
+        android:layout_marginLeft="6dp"
+       />
     <EditText
-        android:id="@+id/pass"
-        android:layout_below="@id/email"
+        android:id="@+id/ed_mot_de_passe_create_activity"
+        android:layout_below="@id/ed_email_activity_create"
         android:layout_width="270dp"
         android:layout_height="@dimen/height"
         android:layout_centerHorizontal="true"
@@ -85,9 +123,22 @@
         android:textColorHint="@color/gris_aghma9"
 
          />
+    <TextView
+        android:id="@+id/tv_msg_mot_de_passe_create_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ed_mot_de_passe_create_activity"
+        android:paddingLeft="4dp"
+        android:layout_alignLeft="@id/ed_email_activity_create"
+        android:text="@string/mot_de_passe_invalide"
+        android:textColor="@color/red"
+        android:visibility="invisible"
+        android:textSize="10dp"
+        android:layout_marginLeft="6dp"
+        />
     <EditText
-        android:id="@+id/repass"
-        android:layout_below="@id/pass"
+        android:id="@+id/ed_repeter_mot_de_passe_create_activity"
+        android:layout_below="@id/ed_mot_de_passe_create_activity"
         android:layout_width="270dp"
         android:layout_height="@dimen/height"
         android:layout_centerHorizontal="true"
@@ -99,17 +150,33 @@
         android:hint="@string/remdphint"
         android:inputType="textPassword"
         android:textColorHint="@color/gris_aghma9" />
+    <TextView
+        android:id="@+id/tv_msg_repeter_mot_de_passe_create_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ed_repeter_mot_de_passe_create_activity"
+        android:paddingLeft="4dp"
+        android:layout_alignLeft="@id/ed_email_activity_create"
+        android:text="@string/repeter_mot_de_passe_invalide"
+        android:textColor="@color/red"
+        android:visibility="invisible"
+        android:textSize="10dp"
+        android:layout_marginLeft="6dp"
+        />
+
     <Button
-        android:id="@+id/s_incrire"
+        android:id="@+id/bt_inscription_create_activity"
         android:layout_width="271dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/repass"
+        android:layout_below="@id/ed_repeter_mot_de_passe_create_activity"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="27dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/inscription"
         android:textColor="@color/white"
         android:background="@drawable/rounded_button"
+        android:enabled="false"
+        android:textAllCaps="false"
 
         />
 

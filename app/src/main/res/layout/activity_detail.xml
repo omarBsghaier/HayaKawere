@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gris_feteah"
+    tools:context=".view.activities.DetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tv_detail_detailactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/iv_retour_activity_detail"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingLeft="10dp"
+            android:text="@string/detail"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:id="@+id/iv_retour_activity_detail"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/retour"
+            />
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_below="@id/tv_detail_detailactivity"
+            android:layout_marginTop="4dp"
+           android:layout_alignLeft="@id/tv_titre_detail_activity"
+            android:layout_alignRight="@id/cv_champs_description_detail_activity"
+            app:iss_auto_cycle="false"
+            app:iss_delay="0"
+
+          />
+
+        <TextView
+            android:id="@+id/tv_titre_detail_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_slider"
+            android:layout_alignLeft="@id/iv_retour_activity_detail"
+
+            android:fontFamily="@font/poppins_semibold"
+            android:maxHeight="52dp"
+            android:text="@string/titre"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="35dp" />
+
+        <TextView
+            android:id="@+id/tv_localisation_detail_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_titre_detail_activity"
+            android:layout_alignLeft="@id/tv_titre_detail_activity"
+            android:drawableLeft="@drawable/localisation_icon"
+            android:drawableTint="@color/gris_aghma9"
+            android:paddingLeft="8dp"
+            android:text="@string/localisation"
+            android:textColor="@color/gris_aghma9" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_champs_description_detail_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_localisation_detail_activity"
+            android:layout_alignLeft="@id/tv_titre_detail_activity"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp"
+            app:cardCornerRadius="6dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_description_detail_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="6dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/Description"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_description_detail_activity"
+                    android:layout_alignLeft="@id/tv_description_detail_activity"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+
+                    />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <me.jlurena.revolvingweekview.WeekView
+            android:id="@+id/revolving_weekview"
+
+            android:layout_width="match_parent"
+            android:layout_height="885dp"
+            android:layout_below="@id/cv_champs_description_detail_activity"
+
+            android:layout_marginTop="59dp"
+            android:background="@color/white"
+            app:dayBackgroundColor="#05000000"
+            app:eventTextColor="@android:color/white"
+            app:firstDayOfWeek="monday"
+            app:headerColumnBackground="#ffefefef"
+            app:headerColumnPadding="8dp"
+
+            app:headerColumnTextColor="#8f000000"
+            app:headerRowBackgroundColor="@color/vert_feteah"
+            app:headerRowPadding="12dp"
+            app:hourHeight="60dp"
+            app:hourSeparatorColor="@color/white"
+            app:hourSeparatorHeight="4dp"
+            app:noOfVisibleDays="5"
+            app:showDistinctWeekendColor="true"
+            app:todayHeaderTextColor="@color/gris_feteah"
+            app:zoomFocusPointEnabled="true" />
+    </RelativeLayout>
+
+
+</ScrollView>

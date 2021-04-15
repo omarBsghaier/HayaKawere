@@ -12,6 +12,7 @@
     <color name="gris_aghma9">#878787</color>
     <color name="gris_line">#ebebeb</color>
     <color name="vert_feteah">#41DA80</color>
+    <color name="red">#DF1920</color>
     <color name="headercollap"> <gradient
         android:startColor="#33aa86"
         android:endColor="#41dc7f"

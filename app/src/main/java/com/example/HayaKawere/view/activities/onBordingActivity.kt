@@ -1,11 +1,12 @@
-package com.example.HayaKawere
+package com.example.HayaKawere.view.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.HayaKawere.R
 
-class CreateCompteActivity : AppCompatActivity() {
+class onBordingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_create_compte)
+        setContentView(R.layout.onbordingactivity)
     }
 }

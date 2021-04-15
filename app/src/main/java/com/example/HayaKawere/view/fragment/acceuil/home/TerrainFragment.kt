@@ -1,13 +1,16 @@
-package com.example.HayaKawere
+package com.example.HayaKawere.view.fragment.acceuil.home
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.HayaKawere.R
+import com.example.HayaKawere.adapter.TerrainRecycleViewAdapter
+import com.example.HayaKawere.entities.TerrainItem
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -24,6 +27,7 @@ class TerrainFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    var mcontext : Context?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,7 +65,7 @@ class TerrainFragment : Fragment() {
         terrainItemList.add(TerrainItem("soccerFIeld 2", 10))
         terrainItemList.add(TerrainItem("soccerFIeld 2", 10))
         terrainItemList.add(TerrainItem("soccerFIeld 2", 10))
-        var terrainRecycleViewAdapter= TerrainRecycleViewAdapter(terrainItemList)
+        var terrainRecycleViewAdapter= TerrainRecycleViewAdapter(requireContext(), terrainItemList)
         var layoutManager= LinearLayoutManager(requireContext())
         rvListTerrain!!.layoutManager = layoutManager
         rvListTerrain!!.adapter= terrainRecycleViewAdapter

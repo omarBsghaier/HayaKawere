@@ -4,22 +4,40 @@
     <string name="create">Créer votre compte </string>
     <string name="inscription"> S\'inscrire </string>
     <string name="connexion">Se connecter </string>
-    <string name="Hintemail">    loremSam@mail.com </string>
+    <string name="Hintemail">  <font size="15">loremSam@mail.com</font> </string>
     <string name="title_activity">Map</string>
     <string name="app_name" translatable="false">HayaKawere</string>
     <string name="facebook_app_id">708811886457431</string>
     <string name="fb_login_protocol_scheme">fb708811886457431</string>
     <string name="fullnamehint"><font size="15">Nom et prénom</font></string>
     <string name="emailhint"><font size="15">Email</font></string>
-    <string name="mdphint"><font size="15">Mot de passe </font></string>
     <string name="remdphint"><font size="15">Répeter mot de passe</font> </string>
+    <string name="mdphint"><font size="15"> Mot de passe</font> </string>
+
+    <string name="ContinuerAvecGoogle"><b> Continuer avec google </b> </string>
+
     <string name="aime"> ou aimeriez-vous jouer ? </string>
+    <string name="email_invalide"> Email invalide ! </string>
+    <string name="nom_invalide">  Nom de champ non valide !   </string>
+    <string name="prenom_invalide">  Prenom de champ non valide! </string>
+    <string name="mot_de_passe_invalide"> Au moins 5 caracters:un miniscule,un majuscule ,un chiffre ! </string>
+    <string name="repeter_mot_de_passe_invalide"> Mot de passe incorrecte ! </string>
+
+
+
     <string name="filter">Filtrer</string>
+    <string name="detail">Detail</string>
+    <string name="titre">Maracana</string>
+    <string name="Description">Description</string>
+    <string name="non_compte">Vous n\'avez pas de compte? </string>
+    <string name="sing_up"><u><b>S\'inscrivez-vous</b></u></string>
+
+
+    <string name="localisation">Ez-zahra,Ben Arous</string>
 
 
     <string name="tab_text_1">Terrain</string>
     <string name="tab_text_2">Evénement</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 

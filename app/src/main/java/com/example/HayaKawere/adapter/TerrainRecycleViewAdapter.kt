@@ -1,18 +1,27 @@
-package com.example.HayaKawere
+package com.example.HayaKawere.adapter
 
-import android.os.Parcel
-import android.os.Parcelable
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.RatingBar
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.HayaKawere.R
+import com.example.HayaKawere.entities.TerrainItem
+import com.example.HayaKawere.view.activities.DetailActivity
 
 
-class TerrainRecycleViewAdapter(private val dataSet: ArrayList<TerrainItem>) :
+class TerrainRecycleViewAdapter constructor(var mcontext: Context,private val dataSet: ArrayList<TerrainItem>) :
     RecyclerView.Adapter<TerrainRecycleViewAdapter.ViewHolder>() {
+     var context:Context?=null
+    init {
+        this.context = mcontext
+    }
+
 
     /**
      * Provide a reference to the type of views that you are using
@@ -26,7 +35,7 @@ class TerrainRecycleViewAdapter(private val dataSet: ArrayList<TerrainItem>) :
         val localisation: TextView
         val nbjoueurs: TextView
         val heures: TextView
-
+        val testtttttkjhabdkjazhekjazh:RelativeLayout
 
         init {
             // Define click listener for the ViewHolder's View.
@@ -37,6 +46,7 @@ class TerrainRecycleViewAdapter(private val dataSet: ArrayList<TerrainItem>) :
             nbjoueurs = view.findViewById(R.id.nbjoueurs)
             localisation = view.findViewById(R.id.localisation)
             description = view.findViewById(R.id.description)
+            testtttttkjhabdkjazhekjazh= view.findViewById<RelativeLayout>(R.id.rl_list_terrain)
 
 
         }
@@ -60,9 +70,25 @@ class TerrainRecycleViewAdapter(private val dataSet: ArrayList<TerrainItem>) :
         // contents of the view with that element
         viewHolder.titre.text = terrainItem.soccerFieldName
         viewHolder.description.text = terrainItem.price.toString()
+        viewHolder.testtttttkjhabdkjazhekjazh.setOnClickListener(object: View.OnClickListener {
+            override fun onClick(v:View) {
+                val intent = Intent(context, DetailActivity::class.java)
+                context!!.
+                startActivity(intent)
+            }
+        })
+
+
+
+
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount() = dataSet.size
 
+
+
+
+
 }
+

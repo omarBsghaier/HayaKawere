@@ -5,12 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activities.OnBordingActivity">
+    tools:context=".view.activities.onBordingActivity">
 
     <com.cuberto.liquid_swipe.LiquidPager
         android:background="@color/vert_feteah"
         android:id="@+id/vp_onbording_onbordinga_ctivity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-       />
+        />
 </RelativeLayout>

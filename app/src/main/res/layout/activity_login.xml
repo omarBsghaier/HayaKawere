@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -30,7 +29,7 @@
             android:layout_height="@dimen/height"
             android:layout_below="@id/Email"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="37dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/rounded_edittext"
             android:drawableRight="@drawable/check"
             android:fontFamily="@font/poppins_extralight"
@@ -63,7 +62,9 @@
             android:layout_marginTop="25dp"
             android:background="@drawable/rounded_edittext"
             android:drawableRight="@drawable/vue"
-            android:hint="********"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:paddingLeft="15dp"
             android:inputType="textPassword" />
 
         <Button
@@ -74,7 +75,8 @@
             android:layout_alignLeft="@id/editTextTextPassword"
             android:layout_alignRight="@id/editTextTextPassword"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="27dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
             android:background="@drawable/rounded_button"
             android:fontFamily="@font/poppins_semibold"
             android:textAllCaps="false"
@@ -84,39 +86,46 @@
 
             />
 
+
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="6dp"
+            android:layout_below="@+id/ConnexionLoginB"
             android:layout_alignLeft="@id/editTextTextPassword"
             android:layout_alignRight="@id/editTextTextPassword"
-            android:src="@drawable/line_login"
-            android:layout_below="@+id/ConnexionLoginB"
-            android:layout_marginTop="10dp"/>
-
-
-
-
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:src="@drawable/line_login" />
 
         <com.facebook.login.widget.LoginButton
 
             android:id="@+id/login_button"
-            android:layout_width="wrap_content"
+            android:layout_width="263dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/ConnexionLoginB"
-            android:paddingVertical="14dp"
-            android:layout_alignLeft="@id/editTextTextPassword"
-            android:layout_alignRight="@id/editTextTextPassword"
-            android:layout_centerHorizontal="true"
+            android:layout_alignLeft="@id/ConnexionLoginB"
+            android:layout_alignRight="@id/ConnexionLoginB"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
-            style="@style/FacebookLoginButton"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="23dp"
+            android:background="@color/white"
+            android:drawableTint="@color/com_facebook_blue"
+            android:elevation="2dp"
 
+            android:maxHeight="500dp"
+            android:paddingVertical="40dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:shadowColor="@color/gris_aghma9"
+            android:textColor="@color/black" />
 
-            />
-<RelativeLayout
+        <RelativeLayout
+    android:id="@+id/bt_google_activity_login"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-        android:layout_below="@+id/login_button"
+    android:layout_below="@+id/login_button"
     android:layout_alignLeft="@id/editTextTextPassword"
     android:layout_alignRight="@id/editTextTextPassword"
 
@@ -134,28 +143,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
-            android:text="Continuer avec google"
+            android:text="@string/ContinuerAvecGoogle"
+            android:textSize="14dp"
             android:textColor="@color/black"
             android:drawableLeft="@drawable/googleg_standard_color_18"
             android:textAllCaps="false"
              />
+</RelativeLayout>
+        <TextView
+            android:id="@+id/tv_noncompte_activity_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_google_activity_login"
+            android:textAllCaps="false"
+            android:text="@string/non_compte"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_light"
+            android:layout_marginTop="10dp"
+            android:textSize="9dp"
+            android:layout_alignLeft="@id/bt_google_activity_login"/>
+        <TextView
+            android:id="@+id/tv_inscription_activity_login"
+            android:paddingLeft="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_noncompte_activity_login"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/bt_google_activity_login"
+            android:textColor="@color/vert_feteah"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/sing_up"
+            android:textSize="9dp"
+            android:onClick="loginToCreate"
+            />
 
 
 </RelativeLayout>
-<!--        <com.google.android.gms.common.SignInButton-->
-<!--            android:id="@+id/sign_in_button"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@id/login_button"-->
-<!--            android:layout_alignLeft="@id/editTextTextPassword"-->
-<!--            android:layout_alignRight="@id/editTextTextPassword"-->
-<!--            android:layout_centerHorizontal="true"-->
-<!--            android:textAlignment="center"-->
-<!--            android:layout_marginTop="20dp"-->
-
-
-
-
-<!--            />-->
-    </RelativeLayout>
 
