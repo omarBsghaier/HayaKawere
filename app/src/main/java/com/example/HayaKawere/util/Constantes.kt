@@ -17,7 +17,7 @@ class Constantes {
     }
 
 
-    val URl = "http://192.168.1.7:5000"
+    val URl = "http://192.168.1.5:5000"
     val emailExist=""
 
 

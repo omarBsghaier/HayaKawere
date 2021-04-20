@@ -1,5 +1,7 @@
 package com.example.HayaKawere.view.activities
 
+import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -200,11 +202,39 @@ class CreateCompteActivity : AppCompatActivity() {
                             override fun success(response: Response<StandardResponse>) {
                                 println(response.body())
                                 println(response.code())
+                                if (response.code() == 200) {
+
+
+                                    var view: View = layoutInflater.inflate(R.layout.succesdialog, null)
+                                    var alertDialog: AlertDialog =
+                                        AlertDialog.Builder(this@CreateCompteActivity)
+                                            .setView(view)
+                                            .create()
+                                    alertDialog.show()
+
+
+                                }
+                                if(response.code() == 422 ){
+                                    var view: View = layoutInflater.inflate(R.layout.attentiondialog, null)
+                                    var alertDialog: AlertDialog =
+                                        AlertDialog.Builder(this@CreateCompteActivity)
+                                            .setView(view)
+                                            .create()
+                                    alertDialog.show()
+
+                                }
 
 
                             }
 
                             override fun failure(t: Throwable) {
+                                var view: View = layoutInflater.inflate(R.layout.erreurcnxdialog, null)
+                                var alertDialog: AlertDialog =
+                                    AlertDialog.Builder(this@CreateCompteActivity)
+                                        .setView(view)
+                                        .create()
+                                alertDialog.show()
+
 
 
                             }

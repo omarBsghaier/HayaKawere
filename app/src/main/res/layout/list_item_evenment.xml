@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_list_terrain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/partie1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/im_evenment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+
+            app:srcCompat="@drawable/image" />
+
+        <TextView
+            android:id="@+id/tv_titre_evenemnet_list_item_evenement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/im_evenment"
+            android:layout_toRightOf="@id/im_evenment"
+            android:fontFamily="@font/poppins_light"
+            android:text="evenement"
+            android:textColor="@color/black" />
+
+        <RatingBar
+            android:id="@+id/rb"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_titre_evenemnet_list_item_evenement"
+            android:layout_toRightOf="@id/im_evenment"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/stars_button"
+            android:progressTint="@color/Amberlight"
+            android:rating="4.5"
+            android:stepSize="0.5"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_date_evenement_list_item_evenement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rb"
+            android:layout_toRightOf="@id/im_evenment"
+            android:fontFamily="@font/poppins_bold"
+            android:inputType="date"
+            android:text="20/02/2021"
+            android:textColor="@color/vert_feteah" />
+
+
+
+        <Button
+            android:id="@+id/bt_participer_list_item_evenment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_heart"
+            android:layout_alignRight="@id/bt_heart"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bt_reserver"
+            android:fontFamily="@font/poppins"
+            android:minWidth="2dp"
+            android:minHeight="2dp"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="4dp"
+            android:text="@string/participer"
+            android:textColor="@color/white"
+            android:textSize="11dp"
+            android:textAllCaps="false"
+
+            />
+
+
+        <com.like.LikeButton
+            android:id="@+id/bt_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            app:icon_size="14dp"
+            app:icon_type="heart" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

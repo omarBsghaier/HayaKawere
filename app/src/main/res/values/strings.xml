@@ -13,8 +13,14 @@
     <string name="emailhint"><font size="15">Email</font></string>
     <string name="remdphint"><font size="15">Répeter mot de passe</font> </string>
     <string name="mdphint"><font size="15"> Mot de passe</font> </string>
+    <string name="textsucces">Félicitations ! Votre nouveau compte a été créé ! S\'il vous plait vérifier votre Mail </string>
+    <string name="textattention">Attention ! vérifier les champs s\'il vous plait !</string>
+    <string name="texterreur">Erreur  ! vérifier votre connexion s\'il vous plait !  </string>
+
 
     <string name="ContinuerAvecGoogle"><b> Continuer avec google </b> </string>
+    <string name="participer">participer</string>
+
 
     <string name="aime"> ou aimeriez-vous jouer ? </string>
     <string name="email_invalide"> Email invalide ! </string>

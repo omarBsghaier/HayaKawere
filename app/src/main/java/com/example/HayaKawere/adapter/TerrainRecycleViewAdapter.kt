@@ -18,8 +18,10 @@ import com.example.HayaKawere.view.activities.DetailActivity
 class TerrainRecycleViewAdapter constructor(var mcontext: Context,private val dataSet: ArrayList<TerrainItem>) :
     RecyclerView.Adapter<TerrainRecycleViewAdapter.ViewHolder>() {
      var context:Context?=null
+    var data : ArrayList<TerrainItem>
     init {
         this.context = mcontext
+        data = dataSet
     }
 
 
@@ -85,6 +87,11 @@ class TerrainRecycleViewAdapter constructor(var mcontext: Context,private val da
 
     // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount() = dataSet.size
+    fun filtrageTerrain (listfilterd: ArrayList<TerrainItem> ){
+       data = listfilterd
+        notifyDataSetChanged()
+
+    }
 
 
 

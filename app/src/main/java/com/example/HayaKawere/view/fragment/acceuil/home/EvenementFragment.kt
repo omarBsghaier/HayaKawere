@@ -5,7 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.HayaKawere.R
+import com.example.HayaKawere.adapter.EvenementRecycleViewAdapter
+import com.example.HayaKawere.adapter.TerrainRecycleViewAdapter
+import com.example.HayaKawere.entities.EvenementItem
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,8 +40,26 @@ class EvenementFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_evenement, container, false)
+        var view= inflater.inflate(R.layout.fragment_evenement, container, false)
+
+        initView(view)
+
+        return view
     }
+
+    private fun initView(view: View?) {
+        var rvListEvenment= view?.findViewById<RecyclerView>(R.id.rv_list_evenement_fragment_evenement)
+        var evenItemList= ArrayList<EvenementItem>()
+       evenItemList.add(EvenementItem("soccerFIeld 2", "20/02/20"))
+        evenItemList.add(EvenementItem("soccerFIeld 2", "10/05/20"))
+
+        var EvenementRecycleViewAdapter= EvenementRecycleViewAdapter(requireContext(), evenItemList)
+        var layoutManager= LinearLayoutManager(requireContext())
+        rvListEvenment!!.layoutManager = layoutManager
+        rvListEvenment!!.adapter= EvenementRecycleViewAdapter
+    }
+
+
 
     companion object {
         /**

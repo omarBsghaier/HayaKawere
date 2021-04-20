@@ -8,9 +8,7 @@ import com.example.HayaKawere.view.fragment.onBoarding.OnBordingFragment1
 import com.example.HayaKawere.view.fragment.onBoarding.OnBordingFragment2
 import com.example.HayaKawere.view.fragment.onBoarding.OnBordingFragment3
 
-class OnBordingViewAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(
-    fragmentManager,
-    FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+class OnBordingViewAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager, FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     override fun getCount(): Int {
         return 3

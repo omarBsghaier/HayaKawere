@@ -4,6 +4,7 @@ import com.example.HayaKawere.dao.callBack.APiResponseStandardCallBack
 import com.example.HayaKawere.entities.ApiInterface
 import com.example.HayaKawere.entities.StandardResponse
 import com.example.HayaKawere.entities.User
+import com.example.HayaKawere.entities.userLogin
 import com.example.HayaKawere.util.Constantes
 
 import retrofit2.Call
@@ -59,9 +60,9 @@ class GestionUserDao {
         })
 
     }
-    fun loginWithEmailAndPassword (email : String,password :String, aPiResponseCallBack: APiResponseStandardCallBack)
+    fun loginWithEmailAndPassword (userLogin: userLogin, aPiResponseCallBack: APiResponseStandardCallBack)
     {
-        val call: Call<StandardResponse> =userinterface!!.postLogin(email,password)
+        var call: Call<StandardResponse> =userinterface!!.postLogin(userLogin)
         call.enqueue(object : Callback<StandardResponse> {
 
             override fun onResponse(call: Call<StandardResponse>, response: Response<StandardResponse>) {
